@@ -1,7 +1,7 @@
 rvmbase
 =======
 
-Pre-built binaries for RVM geared towards Ubuntu 10.10.
+Pre-built binaries for RVM geared towards Ubuntu 10.10. BSD-licensed.
 
 Requirements
 ============

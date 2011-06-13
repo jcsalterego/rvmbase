@@ -57,16 +57,23 @@ if [ ! -f "$sentinel" ]; then
     exit 1;
 fi
 
-if [ -n "$(grep $version $installs)" ]; then
+if [ ! -f "$installs" ]; then
+    # no config/installs file exists... continue.
+    :
+elif [ -n "$(grep $version $installs)" ]; then
     echo "$version already exists. Exiting.";
     exit 0;
 fi
 
 # make we're chowned correctly
-chown -R :rvm "$srcdir";
+chown -R :"$rvmgroup" "$srcdir";
 rsync -av "$srcdir/" "$destdir/"
 
-if [ -z "$(grep $version $installs)" ]; then
+if [ ! -f "$installs" ]; then
     # add version to config/installs
-    echo "$version" >> $installs;
+    echo "$version" > "$installs";
+    chown :"$rvmgroup" "$installs";
+elif [ -z "$(grep $version $installs)" ]; then
+    # add version to config/installs
+    echo "$version" >> "$installs";
 fi

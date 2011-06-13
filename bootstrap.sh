@@ -2,9 +2,13 @@
 #
 # Run this via:
 #
+#   curl -L bit.ly/rvmbase | bash
+#
+# Or expanded:
+#
 #   bash < <(curl -s https://raw.github.com/jcsalterego/rvmbase/master/bootstrap.sh)
 #
-# (Or y'know... don't.)
+# Or y'know... don't.
 #
 
 destdir=/usr/local/rvmbase

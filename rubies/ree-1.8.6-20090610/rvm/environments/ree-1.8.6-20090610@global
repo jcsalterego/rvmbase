@@ -1,0 +1,11 @@
+export PATH="/usr/local/rvm/gems/ree-1.8.6-20090610@global/bin:/usr/local/rvm/gems/ree-1.8.6-20090610@global/bin:/usr/local/rvm/rubies/ree-1.8.6-20090610/bin:/usr/local/rvm/bin:$PATH"
+rvm_path='/usr/local/rvm' ; export rvm_path
+RUBY_VERSION='ree-1.8.6-20090610' ; export RUBY_VERSION
+GEM_HOME='/usr/local/rvm/gems/ree-1.8.6-20090610@global' ; export GEM_HOME
+GEM_PATH='/usr/local/rvm/gems/ree-1.8.6-20090610@global:/usr/local/rvm/gems/ree-1.8.6-20090610@global' ; export GEM_PATH
+MY_RUBY_HOME='/usr/local/rvm/rubies/ree-1.8.6-20090610' ; export MY_RUBY_HOME
+IRBRC='/usr/local/rvm/rubies/ree-1.8.6-20090610/.irbrc' ; export IRBRC
+rvm_ruby_string='ree-1.8.6-20090610' ; export rvm_ruby_string
+rvm_gemset_name='global' ; export rvm_gemset_name
+unset MAGLEV_HOME
+unset RBXOPT

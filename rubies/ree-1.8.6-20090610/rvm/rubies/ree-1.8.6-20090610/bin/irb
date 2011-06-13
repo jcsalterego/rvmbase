@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+ENV['GEM_HOME']=ENV['GEM_HOME'] || '/usr/local/rvm/gems/ree-1.8.6-20090610'
+ENV['GEM_PATH']=ENV['GEM_PATH'] || '/usr/local/rvm/gems/ree-1.8.6-20090610:/usr/local/rvm/gems/ree-1.8.6-20090610@global'
+ENV['PATH']='/usr/local/rvm/gems/ree-1.8.6-20090610/bin:/usr/local/rvm/gems/ree-1.8.6-20090610@global/bin:/usr/local/rvm/rubies/ree-1.8.6-20090610/bin:' + ENV['PATH']
+
+#
+#   irb.rb - intaractive ruby
+#   	$Release Version: 0.9.5 $
+#   	$Revision$
+#   	$Date$
+#   	by Keiju ISHITSUKA(keiju@ruby-lang.org)
+#
+
+require "irb"
+
+if __FILE__ == $0
+  IRB.start(__FILE__)
+else
+  # check -e option
+  if /^-e$/ =~ $0
+    IRB.start(__FILE__)
+  else
+    IRB.setup(__FILE__)
+  end
+end

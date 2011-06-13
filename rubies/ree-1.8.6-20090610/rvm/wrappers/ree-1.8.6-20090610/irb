@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ -s "/usr/local/rvm/environments/ree-1.8.6-20090610" ]]
+then
+  source "/usr/local/rvm/environments/ree-1.8.6-20090610"
+  exec irb "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/usr/local/rvm/environments/ree-1.8.6-20090610'" >&2
+  exit 1
+fi
+  

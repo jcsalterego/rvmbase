@@ -44,6 +44,41 @@ Once installed, everything will reside in `/usr/local/rvmbase`. To run, use `ins
     $ /usr/local/rvmbase/install.sh 1.9.2
     $ /usr/local/rvmbase/install.sh ree-1.8.6
 
+Example
+=======
+
+No rubies:
+
+    root@box:~# rvm list
+    
+    rvm rubies
+    
+    
+Install Ruby Enterprise Edition 1.8.6:
+
+    root@box:~# /usr/local/rvmbase/install.sh ree-1.8.6
+    sending incremental file list
+    ./
+    bin/
+    bin/erb-ree-1.8.6-20090610 -> /usr/local/rvm/wrappers/ree-1.8.6-20090610/erb
+    bin/erb-ree-1.8.6-20090610@global -> /usr/local/rvm/wrappers/ree-1.8.6-20090610@global/erb
+    bin/gem-ree-1.8.6-20090610 -> /usr/local/rvm/wrappers/ree-1.8.6-20090610/gem
+    ...
+    wrappers/ree-1.8.6-20090610@global/ri
+    wrappers/ree-1.8.6-20090610@global/ruby
+    wrappers/ree-1.8.6-20090610@global/testrb
+    
+    sent 14020762 bytes  received 12004 bytes  28065532.00 bytes/sec
+    total size is 13979946  speedup is 1.00
+
+List rubies:
+
+    root@box:~# rvm list
+    
+    rvm rubies
+    
+       ree-1.8.6-20090610 [ x86_64 ]
+
 Uninstall
 =========
 
@@ -54,4 +89,4 @@ N.B.: don't mistype/mistab this one:
 Motivation
 ==========
 
-Compiling rubies are no fun. Debian packages were too difficult for me, and often expect source code, not binaries.
+Compiling rubies are no fun.

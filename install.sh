@@ -5,7 +5,7 @@ set -e;
 usage ()
 {
     echo "Usage: $0 <ruby_version>"
-    echo "  Valid ruby_versions: 1.9.2"
+    echo "  Valid ruby_versions: 1.9.2, ree-1.8.6"
 }
 
 if [ -z "$1" ]; then

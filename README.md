@@ -7,20 +7,34 @@ Requirements
 ============
 
  * OS: Ubuntu 10.10 Maverick Meerkat - amd64
- * rvm root install
+ * rvm -- root install
+ * git (for bootstrap.sh)
 
 Bootstrap
 =========
 
-As root -- about as safe as rvm's installation process:
+There are many ways to bootstrap rvmbase, depending on your current levels of paranoia and laziness:
+
+Run as root -- about as safe as rvm's installation process:
 
     $ curl -L bit.ly/rvmbase | bash
 
-For more visibility:
+For more visibility, to see the commands as they are executed:
 
-    $ curl -L bit.ly/rvmbase > bootstrap.sh
+    $ curl -L bit.ly/rvmbase | bash -x
+
+Long-form lazy bootstrap:
+
+    $ curl -L https://raw.github.com/jcsalterego/rvmbase/master/bootstrap.sh > bootstrap.sh
     $ less bootstrap.sh
-    $ bash bootstraps.h
+
+    # ok? ok.
+    $ bash bootstrap.sh
+
+Longest form -- if you like typing:
+
+    $ git clone https://github.com/jcsalterego/rvmbase.git
+    $ bash rvmbase/bootstrap.sh
 
 Usage
 =====

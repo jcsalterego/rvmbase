@@ -51,7 +51,7 @@ if [ ! -f "$sentinel" ]; then
     exit 1;
 fi
 
-if [ -n "$(grep $version /usr/local/rvm/config/installs)" ]; then
+if [ -n "$(grep $version $installs)" ]; then
     echo "$version already exists. Exiting.";
     exit 0;
 fi

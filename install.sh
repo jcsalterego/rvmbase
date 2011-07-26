@@ -30,6 +30,15 @@ case "$1" in
     "ree-1.8.6")
 	version="ree-1.8.6-20090610";
 	;;
+    "ruby-1.8.6-p420")
+	version="ruby-1.8.6-p420";
+	;;
+    "ruby-1.8.6")
+	version="ruby-1.8.6-p420";
+	;;
+    "1.8.6")
+	version="ruby-1.8.6-p420";
+	;;
     *)
 	;;
 esac

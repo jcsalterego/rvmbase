@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ -s "/usr/local/rvm/environments/ruby-1.8.6-p420" ]]
+then
+  source "/usr/local/rvm/environments/ruby-1.8.6-p420"
+  exec ruby "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/usr/local/rvm/environments/ruby-1.8.6-p420'" >&2
+  exit 1
+fi
+  
